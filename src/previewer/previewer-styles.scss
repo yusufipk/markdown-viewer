@@ -1,0 +1,13 @@
+#previewer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#text {
+  display: flexbox;
+  border: solid 2px;
+  width: 34.5%;
+  height: 200px;
+  padding: 5px;
+  word-wrap: break-word;
+}

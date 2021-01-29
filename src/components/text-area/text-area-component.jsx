@@ -1,13 +1,32 @@
 import { Component } from "react";
+import Previewer from "../../previewer/previewer-component";
 import "./text-area-styles.scss";
 class TextArea extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      input: "",
+    };
   }
 
+  handleChange = (event) => {
+    this.setState({
+      input: event.target.value,
+    });
+  };
+
   render() {
-    return <textarea id="editor" type="textarea"></textarea>;
+    return (
+      <div id="parent">
+        <textarea
+          id="editor"
+          value={this.state.input}
+          onChange={this.handleChange}
+          type="textarea"
+        ></textarea>
+        <Previewer data={this.state.input} />
+      </div>
+    );
   }
 }
 
