@@ -1,8 +1,16 @@
 #parent {
-  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 #editor {
-  height: 40vh;
-  width: 70vh;
+  height: 100vh;
+  width: 60vh;
+}
+
+#second {
+  float: right;
+  margin-top: -7vh;
+  margin-right: 5vh;
 }

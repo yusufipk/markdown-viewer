@@ -1,6 +1,7 @@
 import { Component } from "react";
 import "./previewer-styles.scss";
 import ReactMarkdown from "react-markdown";
+import gfm from "remark-gfm";
 
 class Previewer extends Component {
   constructor(props) {
@@ -9,12 +10,10 @@ class Previewer extends Component {
   }
 
   render() {
-    // const marked = require("marked");
-    // const h = marked(this.props.data);
     return (
-      <div id="previewer">
+      <div id="preview">
         <div id="text">
-          <ReactMarkdown source={this.props.data} />
+          <ReactMarkdown plugins={[gfm]} children={this.props.data} />
         </div>
       </div>
     );
