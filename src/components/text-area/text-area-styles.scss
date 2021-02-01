@@ -6,7 +6,15 @@
 
 #editor {
   height: 100vh;
-  width: 60vh;
+  width: 80vh;
+  background-color: #181a1b;
+  color: white;
+}
+
+@media screen and (max-width: 450px) {
+  #editor {
+    width: 20vh;
+  }
 }
 
 #second {

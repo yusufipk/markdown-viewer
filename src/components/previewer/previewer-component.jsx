@@ -12,9 +12,7 @@ class Previewer extends Component {
   render() {
     return (
       <div id="preview">
-        <div id="text">
-          <ReactMarkdown plugins={[gfm]} children={this.props.data} />
-        </div>
+        <ReactMarkdown plugins={[gfm]} children={this.props.data} />
       </div>
     );
   }
